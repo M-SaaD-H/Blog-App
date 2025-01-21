@@ -8,6 +8,10 @@ import Input from "./Input.jsx"
 import Select from "./Select.jsx"
 import Card from "./Card.jsx"
 import RTE from "./RTE.jsx"
+import Signup from "./Signup.jsx"
+import Login from "./Login.jsx"
+import PostFrom from "./post-form/PostFrom.jsx"
+import AuthLayout from "./AuthLayout.jsx"
 
 export {
     Header,
@@ -19,5 +23,9 @@ export {
     Input,
     Select,
     Card,
-    RTE
+    RTE,
+    Signup,
+    Login,
+    PostFrom,
+    AuthLayout
 }
