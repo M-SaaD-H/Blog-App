@@ -14,7 +14,7 @@ function Signup() {
 
 	const { register, handleSubmit } = useForm();
 
-	const signup = async (data) => {
+	const create = async (data) => {
 		setError("");
 
 		try {
@@ -41,17 +41,16 @@ function Signup() {
 					</span>
 				</div>
 				<h2 className='text-center text-2xl font-bold leading-tight'>Sign up to create account</h2>
-				<p>Already have an account?&nbxp;</p>
-				<Link
-					to="/login"
-					className='font-medium text-primary transition-all duration-200 hover:underline'
-				>
-					Sign in
-				</Link>
+				<p className='max-w-max mx-auto my-4'>Already have an account?&nbsp;
+					<Link
+						to="/login"
+						className='font-medium text-primary transition-all duration-200 hover:underline'
+					>
+						Sign in
+					</Link>
+				</p>
 				{
-					error && (
-						<p className='text-red-500 my-4 text-center'>{error}</p>
-					)
+					error && <p className='text-red-500 my-4 text-center'>{error.message}</p>
 				}
 
 				{/* Form */}
@@ -59,7 +58,7 @@ function Signup() {
 				<form onSubmit={handleSubmit(create)}>
 					<div className='space-y-5'>
 						<Input
-							lable="Full Name:"
+							label="Full Name:"
 							placeholder="Enter your full name"
 							{...register("name", {
 								required: true

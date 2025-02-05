@@ -9,9 +9,9 @@ const Input = React.forwardRef(function Input({ // This 'forwardRef' is used to 
 	const ID = useId();
 
 	return (
-		<div className='w-full'>
+		<div className='w-full flex flex-col gap-1'>
 			{label && (
-				<label className='inline-block mb-1' htmlFor={ID}>{label}</label>
+				<label className='inline-block ml-3' htmlFor={ID}>{label}</label>
 			)}
 			<input
 			type={type}

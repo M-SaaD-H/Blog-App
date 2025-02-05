@@ -9,7 +9,7 @@ export default function Protected({ children, authentication = true }) {
 
 	const [loader, setLoader] = useState(true);
 	// Check this line it is state.status or state.auth.status
-	const authStatus = useSelector(state => state.auth.status);
+	const authStatus = useSelector(state => state.status);
 
 	useEffect(() => {
 		if(authentication &&authStatus !== authentication) {

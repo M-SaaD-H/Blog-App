@@ -13,7 +13,7 @@ function App() {
     authService.getCurrentUser()
     .then((userData) => {
       if(userData) {
-        dispatch(login(userData)); // This make changes in the store and tell the store that i user is logged in so that we can ask the store the if a user is logged in or not anywhere
+        dispatch(login(userData)); // This make changes in the store and tell the store that a user is logged in so that we can ask the store the if a user is logged in or not anywhere
       } else {
         dispatch(logout()); // This tells the user has been logged out. If it is not written then the store will not change its status even after the user has logged out
       }
@@ -28,7 +28,7 @@ function App() {
   }
 
   return (
-    <div className='min-h-screen flex justify-center items-center flex-wrap content-between bg-gray-400'>
+    <div className='min-h-screen flex justify-center items-center flex-wrap content-between'>
       <div className='w-full block'>
         <Header />
         <main>
